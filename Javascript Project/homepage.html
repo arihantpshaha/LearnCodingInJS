@@ -1,0 +1,65 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+   "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+    <head>
+        <title>JavaScript Introduction</title>
+        <style>
+            body {background-color:#99BE4F;}
+            h1 { font-family: monospace;
+                font-size: 50px;
+                text-align: center;}
+            button { background-color: darkslategray ;
+                     font-size: 35px;
+                     text-align: center;
+                     font-family: monospace;        
+                     color: white;
+                     border-radius: 10px;
+                    position: relative;
+                    }
+            .button-wrapper {
+                    height: 50%;
+                    top:50%;
+                    text-align: center;
+                }
+            .interact {
+                height: 50%;
+                    top:50%;
+            }
+            .interact-text  {
+                vertical-align: middle;
+                font-size: 35px;
+                text-align: center;
+                font-family: monospace;        
+                color: white;
+                width: 50%;
+                    display: inline-block;
+                        float:left
+            }
+            .exp{
+                
+            }
+        </style>
+    </head>
+    <body>
+        <h1 id='header'>WelCome</h1>
+        <div class="button-wrapper"><button id='question' onclick="document.getElementById('header').innerHTML='JavaScript :):)'">What is this site About?</button></div>
+        <div class='interact'>
+            <table>
+                <tr>
+                    <td class ='hide'  style="width:40%">
+                        <div class='interact-text' style="width:100%">Can you code in JS lingo</div>
+                    </td>
+                    <td style="width:25%" >
+                          <img src="happyface.jpeg" onclick="document.getElementsByClassName('hide').style.display='none'" >
+                    </td>
+                    <td style="width:25%" >
+                          <img src="sadface.jpg" onclick="document.getElementsByClassName('hide').style.display='none'" >
+                    </td> 
+                    
+                    </tr>
+            </table>
+            
+            
+        </div>
+    </body>
+</html>
