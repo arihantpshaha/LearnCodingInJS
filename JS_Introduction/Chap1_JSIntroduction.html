@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Chapter 1 : JSIntro</title>
+        <style>
+            body{
+                background-color: #99BE4F;
+            }
+            .chapinfo{
+                text-align: center;}
+            td{
+                border:2px solid black;
+                text-align: center;} 
+            th{
+                border:2px solid black;
+                text-align: center;}
+            img{
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+        </style>
+    </head>
+    <body>
+        <h1 class='chapinfo'>Chapter 1 : JSIntro</h1>
+        <h2 class='chapinfo'>This chapter describes various tasks JS can do</h2>
+        <table width=100%>
+            <thead>
+                <th>Task</th>
+                <th>Implmentation</th>
+            </thead>
+            <tr>
+                <td>
+                    <h4>Change HTML Content</h4>
+                </td>
+                <td>
+                    <h5 id='changeContent'>Hi All</h5>
+                    <button onclick="getElementById('changeContent').innerHTML='Good Morning'">Click Me!</button>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <h4>Change HTML Element Attribute</h4>
+               </td>
+                <td>
+                <img id='changeAttribute' src=sadface.jpg><button onclick="getElementById('changeAttribute').src='happyface.jpeg'">Smile</button>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <h4>Change HTML Style</h4>
+                </td>
+                <td>
+                    <h5 id='changeStyle' >Life Is Beautiful</h5>
+                    <button onclick="getElementById('changeStyle').style.fontSize='25px'">Click Again.. </button>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <h4>Hide HTML Element</h4>
+                </td>
+                <td>
+                    <h5 id='hideElement'>Clean this Mess</h5>
+                    <button onclick="getElementById('hideElement').style.display='none'">Cleaning Machine On</button>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                   <h4>Display a HTML Element</h4> 
+                </td>
+                <td>
+                    <h5 id='displayElement' style="display:none">SURPRISE!!!!</h5>
+                    <button onclick="getElementById('displayElement').style.display='block'">Click</button>
+                </td>
+            </tr>
+        </table>
+    </body>
+</html>
