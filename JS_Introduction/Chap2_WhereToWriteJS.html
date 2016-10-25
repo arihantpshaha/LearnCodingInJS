@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Where To Write JS</title>
+        <style>
+            body{
+                background-color: #99BE4F;}
+            .chapinfo{
+                color: white;
+                text-align: center;}
+            td{
+                border:2px solid black;
+                color: white;
+                text-align: center;} 
+            thead{
+				background-color: black;
+				border:2px solid black;
+                text-align: center;}
+            .middlecol{
+                text-align: left;
+            }
+        </style>
+    </head>
+    <body>
+        <h1 class='chapinfo'>Where Can We Write Javascript Code</h1>
+        <h2 class='chapinfo'>JS can be written as inline, block and to external JS files</h2>
+        <h2 class='chapinfo'>JS Code can be written in head as well as body. But writing JS at the end of page is recommended.</h2>
+        <table width=100%>
+            <thead>
+                <td>Location</td>
+                <td>Example</td>
+                <td>Results</td>
+            </thead>
+            <tr>
+                <td>Inline</td>
+                <td class='middlecol'>onclick="getElementById('inlineeg').style.display='block'"</td>
+                <td><h5 id='inlineeg' style="display:none">Hi Everyone...Good Morning</h5>
+                    <button onclick="getElementById('inlineeg').style.display='block'">Greet EveryOne</button>
+                </td>
+            </tr>
+            <tr>
+                <td>Block</td>
+                <td class='middlecol'>
+                    &lt;script&gt;<br>
+                        function myfunction()   {<br>
+                            document.getElementById('blockeg').innerHTML = Date();}<br>
+                    &lt;/script&gt;
+                </td>
+                <td>
+                    <h5 id='blockeg'></h5>
+                    <button onclick="myfunction()">Display Date and Time</button>
+                </td>
+            </tr>
+            <tr>
+                <td>External Javascript File</td>
+                <td class='middlecol'>
+                    &lt;script src="Chap2_ExternalJSCodeEg.js"&gt;&lt;/script&gt;<br>
+                    function myfunctionexternal()   {<br>
+                        document.getElementById("externalfileeg").innerHTML="The JS code is in external JS file.";
+                        }<br>
+                    Function Call:- &lt;button onclick="myfunctionexternal()"&gt;Get location of externalJS File&lt;/&gt;
+                </td>
+                <td>
+                    <h5 id='externalfileeg'></h5>
+                    <button onclick="myfunctionexternal()">Get location of externalJS File</button>
+                </td>
+            </tr>
+        </table>
+        <script>
+            function myfunction()   {
+            document.getElementById('blockeg').innerHTML = Date();}
+        </script>
+        <script src="Chap2_ExternalJSCodeEg.js"></script>
+    </body>
+</html>
