@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>JS Output</title>
+		<style>
+			 body{
+                background-color: #99BE4F;
+			}
+            .chapinfo{
+                color: white;
+                text-align: center;}
+			td{
+				color: white;
+				border: 2px solid #000000;
+				border-radius: 10px;
+				text-align: center;
+			}
+			thead{
+				background-color: black;
+			}
+		</style>
+		
+	</head>
+	<body>
+		<h1 class="chapinfo">JS Output Display Options</h1>
+		<h2 class="chapinfo">JavaScript does NOT have any built-in print or display functions.</h2>
+		<h2 class="chapinfo">JS uses HTML components and displays data in various ways</h2>
+		<table width="100%">
+			<thead>
+				<td>Options</td>
+				<td>Example</td>
+				<td>Results</td>
+			</thead>
+			<tr>
+				<td>Using alerts</td>
+				<td>window.alert("Can display O/P or message")</td>
+				<td >
+					Click Add to add 234 and 654
+					<button onclick="add()" >Add</button>
+				</td>
+			</tr>
+			<tr>
+				<td>Using document .write()<br>
+					This will clear the complete existing HTML Page and display its contents.
+				</td>
+				<td>document.write("Can display O/P or message")</td>
+				<td>Click Add to add 234 and 654
+					<button onclick="addWrite()" >Add</button></td>
+			</tr>
+			<tr>
+				<td>Using innerHtml</td>
+				<td>document.getElementById().innerHtml="Can display O/P or message"</td>
+				<td>
+					Addition of 234 and 654 is <label id='result' style="display:none">ABCD</label>
+					<button  id="add" onclick="addinnerHTML()">Add</button>
+				</td>
+			</tr>
+			<tr>
+				<td>Using console.log()</td>
+				<td>console.log("Can display O/P or message")</td>
+				<td><button  id="addconsole" onclick="addconsole()">Add 234 and 654</button>
+					<label id='message' style="display:none"></label>
+				</td>
+			</tr>
+		</table>
+		<script>
+			function add()	{
+				var addition=234+654;
+				window.alert("Addition of 234 and 654 is "+addition);
+			}
+			function addWrite()	{
+				var addition=234+654;
+				document.write("Addition of 234 and 654 is "+addition);
+			}
+			function addinnerHTML()	{
+				var addition=234+654;
+				document.getElementById("add").style.display="none";
+				document.getElementById("result").style.display="inline-block";
+				document.getElementById("result").innerHTML=addition;
+			}
+			function addconsole()	{
+				var addition=234+654;
+				console.log("Addition of 234 and 654 is "+addition);
+				
+				document.getElementById("addconsole").style.display="none";
+				document.getElementById("message").style.display="inline-block";
+				document.getElementById("message").innerHTML="Open Devloper Tools and select Console terminal to view result";
+			}
+		</script>
+	</body>
+</html>

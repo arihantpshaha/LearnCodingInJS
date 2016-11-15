@@ -11,7 +11,8 @@
             td{
                 border:2px solid black;
                 color: white;
-                text-align: center;} 
+                text-align: center;
+				border-radius: 10px;} 
             thead{
 				background-color: black;
 				border:2px solid black;
@@ -25,7 +26,7 @@
         <h1 class='chapinfo'>Where Can We Write Javascript Code</h1>
         <h2 class='chapinfo'>JS can be written as inline, block and to external JS files</h2>
         <h2 class='chapinfo'>JS Code can be written in head as well as body. But writing JS at the end of page is recommended.</h2>
-        <table width=100%>
+        <table style="height:70%; width:100%">
             <thead>
                 <td>Location</td>
                 <td>Example</td>
@@ -54,8 +55,8 @@
             <tr>
                 <td>External Javascript File</td>
                 <td class='middlecol'>
-                    &lt;script src="Chap2_ExternalJSCodeEg.js"&gt;&lt;/script&gt;<br>
-                    function myfunctionexternal()   {<br>
+                    Mention the JS File in Html page:- &lt;script src="Chap2_ExternalJSCodeEg.js"&gt;&lt;/script&gt;<br>
+                    JS Script Code in ext. file :-function myfunctionexternal()   {<br>
                         document.getElementById("externalfileeg").innerHTML="The JS code is in external JS file.";
                         }<br>
                     Function Call:- &lt;button onclick="myfunctionexternal()"&gt;Get location of externalJS File&lt;/&gt;

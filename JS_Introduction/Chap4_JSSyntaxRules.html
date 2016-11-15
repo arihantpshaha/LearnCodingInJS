@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>JS Language Elements and JS Code Syntax</title>
+		<link rel="stylesheet" href="commonsettings.css"> 
+		<style>
+			.topiclist{
+				position: absolute;
+				//wborder: 3px solid black;
+				text-align: center;
+				width: 400px;
+				height: 87%;
+			}
+			.topics{
+				width: 320px;
+				height: 50px;
+				border-radius: 10px;
+				margin: 10px;
+				margin-bottom: 15px;
+			}
+			.subtopiclist{
+				position:absolute;
+				float:left;
+				width:800px;
+				margin-left: 450px;
+				//border:3px solid black;
+				text-align: center;
+			}
+			.subtopics{
+				width: 175px;
+				height: 50px;
+				border-radius: 10px;
+				margin-top: 5px;
+				margin-bottom: 10px;
+				margin:10px;
+			}
+		</style>
+	</head>
+	<body>
+		<script type= "text/javascript">
+			var hidetopic=new Element();
+			var statusFlag=0;
+			function displaySubTopics(topicIndex){
+				var mylist=new Array();
+				if(statusFlag==1)	{
+					hidetopic.style.display='none';
+					statusFlag=0;
+				}
+				switch(topicIndex){
+					case 1: mylist=document.getElementsByName("JS Syntax");
+						break;
+					case 2: mylist=document.getElementsByName("JS Statements");
+						break;
+					case 3: mylist=document.getElementsByName("JS Comments");
+						break;
+					case 4: mylist=document.getElementsByName("JS Variables");
+						break;
+				}
+				statusFlag=1;
+				hidetopic=mylist[0];
+				hidetopic.style.display='block';
+			}
+		</script>
+		<h1 class=pagetitle >JS Language Elements and JS Code Syntax</h1>
+		<div class=topiclist>
+			<button class="topics" onclick="displaySubTopics(1)">JS Syntax</button>
+			<button class="topics" onclick="displaySubTopics(2)">JS Statements</button>
+			<button class="topics" onclick="displaySubTopics(3)">JS Comments</button>
+			<button class="topics" onclick="displaySubTopics(4)">JS Variables</button>
+		</div>
+		<div class=subtopiclist hidden="true" name="JS Syntax" >
+			<button class=subtopics>JS Values</button>
+			<button class=subtopics>JS Operators</button>
+			<button class=subtopics>JS Expressions</button>
+			<button class=subtopics>JS Keywords</button>
+			<button class=subtopics>JS Comments</button>
+			<button class=subtopics>JS Identifiers</button>
+			<button class=subtopics>Other General Things</button>
+		</div>
+		<div class=subtopiclist hidden="true" name="JS Statements">
+			<button class=subtopics>JS Programs</button>
+			<button class=subtopics>JS Semicolons</button>
+			<button class=subtopics>JS Whitespace</button>
+			<button class=subtopics>JS Line Length  LineBreak</button>
+			<button class=subtopics>JS CodeBlocks</button>
+			<button class=subtopics>JS Keywords</button>
+		</div>
+		<div class=subtopiclist hidden="true" name="JS Comments">
+			<button class=subtopics>Single Line Comment</button>
+			<button class=subtopics>Multiple Lines Comment</button>
+		</div>
+		<div class=subtopiclist hidden="true" name="JS Variables">
+			<button class=subtopics>JS Identifiers</button>
+			<button class=subtopics>JS DataTypes</button>
+		</div>
+	</body>
+</html>
